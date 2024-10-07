@@ -1,0 +1,23 @@
+[package]
+name = "youbet-solana-program"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "youbet_solana_program"
+
+[features]
+# localnet = []
+# default = ["localnet"]
+devnet = []
+default = ["devnet"]
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "0.30.1", features = ["init-if-needed"] }
