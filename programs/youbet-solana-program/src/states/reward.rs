@@ -14,5 +14,6 @@ impl RewardAccount {
     pub fn space() -> usize {
         8 // default
         + 8
+        + 8
     }
 }

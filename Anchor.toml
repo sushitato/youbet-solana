@@ -5,10 +5,10 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-youbet_solana_program = "7d9dheT1PcwmeE3PYYf4xjjnUJzhBpDMvAuUEBEdrE3W"
+youbet_solana_program = "CuuiWq1ATi8XUgnv8tdiYNQKccs3iNw2uz9CDAZeuc15"
 
 [programs.localnet]
-youbet_solana_program = "7d9dheT1PcwmeE3PYYf4xjjnUJzhBpDMvAuUEBEdrE3W"
+youbet_solana_program = "CuuiWq1ATi8XUgnv8tdiYNQKccs3iNw2uz9CDAZeuc15"
 
 [registry]
 url = "https://api.apr.dev"

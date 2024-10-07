@@ -49,7 +49,7 @@ pub struct ConfirmTaskAccounts<'info> {
     )]
     pub wallet_account: Box<Account<'info, WalletAccount>>,
     #[account(
-        init,
+        init_if_needed,
         payer = fee_and_rent_payer,
         space = ProjectUserPointAccount::space(),
         seeds = [
@@ -67,7 +67,7 @@ pub struct ConfirmTaskAccounts<'info> {
         space = RewardAccount::space(),
         seeds = [
             REWARD_PREFIX.as_bytes(),
-            fee_and_rent_payer.key().as_ref(),
+            github_account.wallet.as_ref(),
         ],
         bump
     )]

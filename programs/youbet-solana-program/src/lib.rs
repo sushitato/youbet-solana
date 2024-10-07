@@ -6,11 +6,12 @@ mod error;
 mod events;
 mod instructions;
 mod states;
-#[cfg(feature = "devnet")]
-declare_id!("AM4cf3KpEB2x1gR6qM9WHwCA4YakbdtCGiWCREii3fxv");
 
-#[cfg(feature = "localnet")]
-declare_id!("AM4cf3KpEB2x1gR6qM9WHwCA4YakbdtCGiWCREii3fxv");
+#[cfg(feature = "devnet")]
+declare_id!("CuuiWq1ATi8XUgnv8tdiYNQKccs3iNw2uz9CDAZeuc15");
+
+// #[cfg(feature = "localnet")]
+// declare_id!("CuuiWq1ATi8XUgnv8tdiYNQKccs3iNw2uz9CDAZeuc15");
 
 #[program]
 pub mod youbet_solana_program {

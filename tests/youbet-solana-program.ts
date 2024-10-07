@@ -207,6 +207,8 @@ describe("youbet-solana-program", () => {
     ///////////////////////
     const [projectUserPoint, projectUserPointBump] =
       getProjectUserPointPdaAndBump(project_id, wallet);
+    const [reward, _] = getRewardPdaAndBump(data22.wallet);
+
     const confirmTaskAccounts = {
       feeAndRentPayer: feeAndRentKeypair.publicKey,
       task,
@@ -214,9 +216,11 @@ describe("youbet-solana-program", () => {
       githubAccount,
       walletAccount,
       projectUserPoint,
+      reward,
       systemProgram: new PublicKey("11111111111111111111111111111111"),
       rent: SYSVAR_RENT_PUBKEY,
     };
+
     const tx3 = await program.methods
       .confirmTask(task_id, github_id, 10, taskBump, githubBump, walletBump)
       .accounts(confirmTaskAccounts)
